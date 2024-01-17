@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HillWood International</title>
+    <link rel="stylesheet" href="/home/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <img src="/" alt="logo">
+            </div>
+            <div class="navlinks">
+                <ul id="menulist">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#help">Help</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fa fa-search"></i></li>
+                    <li><button class="primary-btn">Sign in</button></li>
+                </ul>
+                <span class="fa fa-bars" onclick="menutoggle()"></span>
+            </div>
+        </div>
+   </header>
+
+   <script>
+     var menulist = document.getElementById('menulist');
+     menulist.style.maxHeight = "0px";
+
+     function menutoggle(){
+        if(menulist.style.maxHeight == "0px"){
+            menulist.style.maxHeight = "100vh";
+        }else{
+            menulist.style.maxHeight = "0px"
+        }
+     }
+   </script>
+
+   <section class="home">
+        <div class="content">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="topimage.jpg" alt="">
+                    <div class="text">
+                        <pre>
+                            <h3>
+                                HillWood International 
+                                Extended Stay Hotel. 
+                                Your home away from 
+                                home.
+                            </h3>
+                            <h6>
+                                Now you can choose from over 500 fully equipped suites with 
+                                our professional staff!
+                            </h6>
+                        </pre>
+                        <div class="flex">
+                            <button class="primary-btn">Book your stay now</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+   </section>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+   </script>
+   <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+   </script>
+</body>
+</html>
