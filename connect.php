@@ -1,11 +1,20 @@
 <?php
+$host = 'localhost';
+$dbname = 'hotel_db';
+$dbusername = 'root';
+$dbpassword = '';
+date_default_timezone_set("Asia/Calcutta");
+$time = date('d-m-Y H:i:s');
+$today = date('Y-m-d');
 
-   $db_name = 'mysql:host=localhost;dbname=hotel_db';
-   $db_user_name = 'root';
-   $db_user_pass = '';
-
-   $conn = new PDO($db_name, $db_user_name, $db_user_pass);
-
+try {
+    
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    #echo "Connection proceed";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
    function create_unique_id(){
       $str = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
       $rand = array();
@@ -17,5 +26,4 @@
       }
       return implode($rand);
    }
-
 ?>
